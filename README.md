@@ -41,8 +41,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/type-name-here)
-- Live Site URL: [Add live site URL here](https://hardbuffet.github.io/type-name-here/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/faq-accordion-card-Z6pgf0Gjdh)
+- Live Site URL: [GitHub pages](https://hardbuffet.github.io/faq-accordion-card/)
 
 ## My process
 
