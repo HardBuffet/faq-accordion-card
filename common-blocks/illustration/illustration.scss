@@ -1,0 +1,16 @@
+@use "../../scss/abstracts/_mixins" as *;
+
+.illustration {
+  grid-row: 1 / 2;
+  margin-top: -111px;
+
+  @include respond-to('huge') {
+    position: relative;
+    margin: {
+      top: initial;
+    }
+    grid: {
+      row: initial;
+    }
+  }
+}

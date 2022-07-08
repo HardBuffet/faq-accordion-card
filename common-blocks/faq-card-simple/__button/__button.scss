@@ -1,0 +1,14 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.faq-card-simple {
+  &__button {
+    @include flex($ai: true, $jc: true, $jcVal: space-between);
+    width: 100%;
+
+    color: #{var(--button)};
+    cursor: pointer;
+    font: {
+      size: 0.76rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../scss/themes/_theme" as t;
+
+.faq-card-simple {
+  &__item {
+    overflow: hidden;
+    border: {
+      bottom: 1px solid t.$faq-card__item_border-clr;
+    }
+    padding: {
+      block: 1.2em;
+    }
+  }
+}

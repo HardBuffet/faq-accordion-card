@@ -1,0 +1,18 @@
+@use "../../scss/themes/_theme" as t;
+@use "../../scss/abstracts/_mixins" as *;
+
+.faq-card-simple {
+  --title: #{t.$faq-card-simple__title_clr};
+  --button: #{t.$faq-card-simple__button_clr};
+
+  color: t.$faq-card-simple_clr;
+  padding: {
+    inline: 1.8em;
+    block: 8em 4.2em;
+  }
+
+  @include respond-to('huge') {
+    position: relative;
+    top: -39px;
+  }
+}

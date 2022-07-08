@@ -1,0 +1,23 @@
+include ../functions.js.pug
+
+-
+  const faqCardSimple = {
+    getComponent: () => {
+      return createComponentClasses(
+        'faq-card-simple',
+        ['title', 'list', 'item', 'button', 'icon', 'desc'],
+        ['active']
+      );
+    },
+    modOn: function(modName, block, elName) {
+      if (!modName) { return };
+
+      if (block) {
+        return this.getComponent().name + this.getComponent().mods[modName];
+      } else {
+        return this.getComponent().el[elName] + this.getComponent().mods[modName];
+      }
+
+      return this.getComponent().mods[modName];
+    }
+  };

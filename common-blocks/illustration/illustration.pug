@@ -1,0 +1,15 @@
+include ../../pug/abstracts/variables/illustration.js.pug
+
+div(class=illustration.getComponent().name)
+
+    img(class=illustration.getComponent().el.box src='images/illustration-box-desktop.svg' alt='')
+
+    div(class=illustration.getComponent().el.img)
+
+      picture(class=illustration.getComponent().el.woman)
+        source(srcset='images/illustration-woman-online-desktop.svg' media='(min-width: 1440px)')
+        img(src='images/illustration-woman-online-mobile.svg' alt='')
+
+      picture(class=illustration.getComponent().el.pattern)
+        source(srcset='images/bg-pattern-desktop.svg' media='(min-width: 1440px)')
+        img(src='images/bg-pattern-mobile.svg' alt='')

@@ -1,0 +1,16 @@
+@use "../../../scss/abstracts/_mixins" as *;
+@use "../../../scss/abstracts/_variables" as v;
+
+.illustration {
+  &__box {
+    display: none;
+
+    @include respond-to("huge") {
+      display: block;
+      position: absolute;
+      left: -93px;
+      top: 198px;
+      z-index: v.$zx-700;
+    }
+  }
+}

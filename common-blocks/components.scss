@@ -1,0 +1,47 @@
+// ==========================================================================
+// faq-card
+// ==========================================================================
+@use "faq-card/faq-card" as faqCard;
+
+// ==========================================================================
+// faq-card-simple
+// ==========================================================================
+@use "faq-card-simple/faq-card-simple" as faqCardSimple;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "faq-card-simple/__title/__title" as fCSTitle;
+@use "faq-card-simple/__list/__list" as fCSList;
+@use "faq-card-simple/__item/__item" as fCSItem;
+@use "faq-card-simple/__button/__button" as fCSButton;
+@use "faq-card-simple/__desc/__desc" as fCSDesc;
+//
+// mods
+// --------------------------------------------------------------------------
+@use "faq-card-simple/__button/_active/_active" as fCSBActive;
+
+// ==========================================================================
+// illustration
+// ==========================================================================
+@use "illustration/illustration" as illustration;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "illustration/__box/__box" as iBox;
+@use "illustration/__img/__img" as iImg;
+@use "illustration/__woman/__woman" as iWoman;
+@use "illustration/__pattern/__pattern" as iPattern;
+
+// ==========================================================================
+// attribution
+// ==========================================================================
+@use "attribution/attribution" as attribution;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "attribution/__note/__note" as aNote;
+@use "attribution/__link/__link" as aLink;
+//
+// modifiers
+// --------------------------------------------------------------------------
+@use "attribution/__link/_hover/_hover" as aLinkHover;

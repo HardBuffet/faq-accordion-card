@@ -1,0 +1,17 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.illustration {
+  &__img {
+    @include grid($jC: true, $gTR: true, $gTRVal: 112px);
+
+    position: relative;
+    @include respond-to("huge") {
+      overflow: hidden;
+      grid: {
+        template: {
+          rows: initial;
+        }
+      }
+    }
+  }
+}

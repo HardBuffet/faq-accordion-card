@@ -1,0 +1,121 @@
+@use "../../../../scss/themes/theme" as t;
+@use "../../../../scss/abstracts/_variables" as v;
+
+.faq-card-simple {
+  --active-anim-duration: 200ms;
+  --active-anim-delay: 200ms;
+  --active-anim-tim-func: linear;
+
+  &__button {
+    --active-hover-clr: #{t.$faq-card-simple__button_hover-clr};
+    --active-focus-fw: #{v.$fw-700};
+
+    &_active {
+      transition: {
+        property: color;
+        duration: #{var(--active-anim-duration)};
+        timing: {
+          function: #{var(--active-anim-tim-func)};
+        }
+      }
+
+      > img {
+        transition: {
+          property: transform;
+          duration: #{var(--active-anim-duration)};
+          timing: {
+            function: #{var(--active-anim-tim-func)};
+          }
+        }
+      }
+
+      + .faq-card-simple__desc {
+        --anim-opacity-start: 0;
+        --anim-max-height-start: 0;
+        --anim-pad-top-start: 0;
+
+        --anim-opacity-end: 1;
+        --anim-max-height-end: 100px;
+        --anim-pad-top-end: 0.6em;
+
+        opacity: #{var(--anim-opacity-start)};
+        max: {
+          height: #{var(--anim-max-height-start)};
+        }
+        padding: {
+          top: #{var(--anim-pad-top-start)};
+        }
+        animation: {
+          name: hideDesc;
+          duration: #{var(--active-anim-duration)};
+          fill: {
+            mode: forwards;
+          }
+          timing: {
+            function: #{var(--active-anim-tim-func)};
+          }
+        }
+      }
+      @keyframes hideDesc {
+        from {
+          opacity: #{var(--anim-opacity-end)};
+          max: {
+            height: #{var(--anim-max-height-end)};
+          }
+          padding: {
+            top: #{var(--anim-pad-top-end)};
+          }
+        }
+        to {
+          opacity: #{var(--anim-opacity-start)};
+          max: {
+            height: #{var(--anim-max-height-start)};
+          }
+          padding: {
+            top: #{var(--anim-pad-top-start)};
+          }
+        }
+      }
+
+      &:hover:not(:focus) {
+        color: #{var(--active-hover-clr)};
+      }
+
+      &:focus {
+        font: {
+          weight: #{var(--active-focus-fw)};
+        }
+
+        > img {
+          transform: rotate(180deg);
+        }
+
+        + .faq-card-simple__desc {
+          animation: {
+            name: showDesc;
+            duration: #{var(--active-anim-duration)};
+            delay: #{var(--active-anim-delay)};
+            fill: {
+              mode: forwards;
+            }
+            timing: {
+              function: #{var(--active-anim-tim-func)};
+            }
+          }
+
+          @keyframes showDesc {
+            to {
+              opacity: #{var(--anim-opacity-end)};
+              max: {
+                height: #{var(--anim-max-height-end)};
+              }
+              padding: {
+                top: #{var(--anim-pad-top-end)};
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

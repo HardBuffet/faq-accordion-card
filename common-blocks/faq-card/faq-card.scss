@@ -1,0 +1,29 @@
+@use "../../scss/themes/_theme" as t;
+@use "../../scss/abstracts/_mixins" as *;
+
+.faq-card {
+  @include grid($gTR: true, $gTRVal: 42px auto auto);
+
+  width: 325px;
+  background: t.$faq-card_bg-clr;
+  margin: {
+    top: 62px;
+  }
+  border: {
+    radius: 20px;
+  }
+
+  @include respond-to("huge") {
+    width: 920px;
+    margin: {
+      top: initial;
+      left: 42px;
+    }
+    grid: {
+      template: {
+        columns: 49% 41%;
+        rows: auto;
+      }
+    }
+  }
+}

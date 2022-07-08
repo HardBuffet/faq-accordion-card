@@ -1,0 +1,25 @@
+@use "../../../scss/abstracts/_variables" as v;
+@use "../../../scss/abstracts/_mixins" as *;
+
+.illustration {
+  &__pattern {
+    position: relative;
+    z-index: v.$zx-300;
+
+    > img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @include respond-to("huge") {
+      width: 220%;
+      max: {
+        height: 839px;
+      }
+      margin: {
+        top: -673px;
+        left: -602px;
+      }
+    }
+  }
+}

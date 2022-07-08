@@ -1,0 +1,21 @@
+@use "../../../scss/abstracts/_variables" as v;
+@use "../../../scss/abstracts/_mixins" as *;
+
+.illustration {
+  &__woman {
+    position: relative;
+    z-index: v.$zx-400;
+
+    > img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @include respond-to('huge') {
+      left: -75px;
+      top: 66px;
+      width: 103%;
+    }
+  }
+}
